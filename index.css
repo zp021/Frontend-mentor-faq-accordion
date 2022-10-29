@@ -33,5 +33,50 @@ root {
 }
 
 body {
+    font-family: "Kumbh Sans", sans-serif;
     font-size: 12px;
+    font-weight: 400;
+    color: var(--clr-dark-gray-blue);
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), 50%, hsl(240, 73%, 65%));
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+summary, details {
+    list-style: none;
+}
+
+
+
+.container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-very-dark-blue);
+    text-align: center;
+}
+
+.container .question {
+    color: var(--clr-very-dark-blue);
+    font-size: 1rem;
+}
+
+.container .question:hover {
+    color: var(--clr-soft-red);
+}
+
+.container .answer {
+    color: var(--clr-dark-gray-blue);
+}
+
