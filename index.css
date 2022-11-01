@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-root {
+:root {
 
     /* Colors primary */
 
@@ -62,7 +62,7 @@ summary, details {
     width: 20.625rem;
     height: 100%;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     position: relative;
     row-gap: 3.75rem;
     padding: 2.125rem 0 3rem;
@@ -95,7 +95,7 @@ summary, details {
     position: absolute;
     width: 15rem;
     height: 6.5rem;
-    top: 6.375rem;
+    top: 6.75rem;
     left: 2.7rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,11 +125,6 @@ summary, details {
     margin-bottom: 0.75rem;
 }
 
-.faq[open="true"] .question {
-    color: var(--clr-dark-blue);
-    font-weight: 700;
-}
-
 .faq[open] .question::before {
     background-image: url(./images/icon-arrow-down.svg);
     transform: rotate(180deg);
@@ -146,7 +141,7 @@ summary, details {
 
 .container .question {
     color: var(--clr-very-dark-blue);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     position: relative;
     cursor: pointer;
 }
@@ -162,8 +157,13 @@ summary, details {
     height: 0.6rem;
 }
 
-.container .question:hover {
+.question:hover {
     color: var(--clr-soft-red);
+}
+
+.question:focus {
+    color: var(--clr-very-dark-blue);
+    font-weight: 700;
 }
 
 .container .answer {
@@ -174,7 +174,88 @@ summary, details {
     transform: translateY(-50%);
 }
 
-.container .answer:hover {
-    color: var(--clr-soft-red);
+@media (min-width: 62em) {
+    .container {
+        width: 57.5rem;
+        min-height: 31.813rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        z-index: 3;
+    }
+
+    .container .image {
+        background-image: url(./images/illustration-woman-online-desktop.svg);
+        background-size: cover;
+        width: 29.5rem;
+        height: 22.438rem;
+        top: 4.375rem;
+        left: -5.25rem;
+    }
+
+    .container::before {
+        content: "";
+        position: absolute;
+        background-image: url(./images/illustration-box-desktop.svg);
+        top: 12.7rem;
+        left: -5.8rem;
+        height: 11.5rem;
+        width: 11.9rem;
+        z-index: 4;
+    }
+
+    .container .image-shadow {
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-size: cover;
+        top: -18.5rem;
+        left: -36.125rem;
+        height: 59rem;
+        width: 61rem;
+    }
+
+    .container .text-container {
+        margin-left: auto;
+        width: 50%;
+        padding: 2.125rem 5.874rem 2.375rem 0rem;
+        align-self: center;
+     }
+
+     .container h1 {
+        text-align: left;
+        margin-bottom: 1.5rem;
+     }
+
+     .container .question {
+        font-size: 0.875rem;
+     }
+
+     .question::before {
+        right: 1rem;
+     }
+
+     .container .faqs-section {
+        padding: 0;
+     }
+
+     .faq[open] .question {
+        margin-bottom: 0.5rem;
+     }
+
+     .faq[open] .answer {
+        margin-bottom: 0.25rem;
+     }
+
 }
 
