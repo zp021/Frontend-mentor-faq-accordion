@@ -223,6 +223,7 @@ summary, details {
         left: -36.125rem;
         height: 59rem;
         width: 61rem;
+        z-index: -1;
     }
 
     .container .text-container {
