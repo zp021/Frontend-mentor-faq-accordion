@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-solution-As6V8_PTtA)
 - [Live site URL](https://zp021-frontend-mentor-faq-accordion.netlify.app/)
 
 ## My process
